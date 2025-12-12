@@ -137,7 +137,7 @@ class PongGame {
             if (wall = 3) {
                 let batLeft = topBat.getLeft();
                 let batRight = topBat.getRight();
-                let missed = (batLeft > ballRight) | (batRight < ballLeft);
+                let missed = (batLeft > ballRight) | (batRight < ballLeft); // verifica se a bola passou pela raquete (se não houve colisão).
                 if (~missed) {
                     if (ballRight < (batLeft + 10)) { let bouncingDirection = -1; }
                     else {
@@ -157,7 +157,7 @@ class PongGame {
             }
 
             if (wall = 4) {
-                let missed = (batLeft > ballRight) | (batRight < ballLeft);
+                let missed = (batLeft > ballRight) | (batRight < ballLeft); // verifica se a bola passou pela raquete (ou seja, se não houve colisão).
                 if (~missed) {
                     if (ballRight < (batLeft + 10)) { let bouncingDirection = -1; }
                     else {
